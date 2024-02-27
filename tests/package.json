@@ -12,7 +12,8 @@
         "test": "echo test"
     },
     "dependencies": {
-        "@ultraos/ultratest": "^0.0.14",
+        "@ultraos/ultratest": "^0.0.15",
+        "ultratest-oracle-plugin": "1.0.0",
         "typescript": "^5.2.2"
     }
 }

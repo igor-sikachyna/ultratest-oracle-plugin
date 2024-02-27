@@ -9,10 +9,10 @@
         "tsconfig.json"
     ],
     "scripts": {
-        "test": "echo test"
+        "build": "tsc"
     },
     "dependencies": {
-        "@ultraos/ultratest": "^0.0.14",
+        "@ultraos/ultratest": "^0.0.15",
         "typescript": "^5.2.2"
     }
 }
