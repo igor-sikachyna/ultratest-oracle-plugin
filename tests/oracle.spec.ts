@@ -1,7 +1,7 @@
-import * as api from '../../../apis/testApi';
-import { UltraTest, UltraTestAPI } from '../../../interfaces/test';
-import * as plugins from '../../../plugins/plugins';
-import { oracle } from './oracle';
+import * as api from '@ultraos/ultratest/src/apis/testApi';
+import { UltraTest, UltraTestAPI } from '@ultraos/ultratest/src/interfaces/test';
+import * as plugins from '@ultraos/ultratest/src/plugins/plugins';
+import { oracle } from '@ultraos/ultratest/src/plugins/custom/ultratest-oracle-plugin/oracle';
 
 export default class OracleTest extends UltraTest {
     constructor() {
@@ -24,7 +24,13 @@ export default class OracleTest extends UltraTest {
     }
 
     async onChainStart(ultra: UltraTestAPI) {
-        ultra.addPlugins([plugins.genesis(), plugins.system(), plugins.ultraContracts(), await plugins.ultraStartup(), await oracle()]);
+        ultra.addPlugins([
+            plugins.genesis(),
+            plugins.system(),
+            plugins.ultraContracts(),
+            await plugins.ultraStartup(),
+            await oracle(),
+        ]);
     }
 
     async tests(ultra: UltraTestAPI) {
@@ -38,7 +44,7 @@ export default class OracleTest extends UltraTest {
             'Check the exchange was registered': async () => {
                 const rows = await systemAPI.getTableRows('eosio.oracle', 'eosio.oracle', 'feeddata');
                 ultra.test.assert(rows.rows.length > 0, 'Exchange was not registered');
-            }
+            },
         };
     }
 }

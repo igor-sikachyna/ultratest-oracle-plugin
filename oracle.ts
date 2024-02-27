@@ -41,14 +41,13 @@ export function oracle(): Plugin {
                             },
                         ],
                         data: {
-                            exchange: 'ugateio'
+                            exchange: 'ugateio',
                         },
                     },
                 ],
                 `Failed to create token factory`,
             );
         },
-        stopCallback: async () => {
-        },
+        stopCallback: async () => {},
     };
 }
