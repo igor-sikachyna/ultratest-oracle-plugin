@@ -1,6 +1,6 @@
 import * as api from '../../../../apis/testApi';
 import { UltraTest, UltraTestAPI } from '../../../../interfaces/test';
-import * as plugins from '../../../../plugins/plugins';
+import * as plugins from '../../../nativePlugins';
 import { oracle } from '../oracle';
 
 // import * as api from '@ultraos/ultratest/src/apis/testApi';

@@ -1,22 +1,12 @@
-import { HTTP_API } from '../../../apis/http';
-import * as api from '../../../apis/pluginApi';
-import { Plugin, argsToParams } from '../../../interfaces/plugin';
-import { UltraTest, UltraTestAPI } from '../../../interfaces/test';
-import { config, keychain } from '../../../services';
-import { logger } from '../../../utility';
+import { HTTP_API } from '@ultraos/ultratest/src/apis/http';
+import * as api from '@ultraos/ultratest/src/apis/pluginApi';
+import { Plugin, argsToParams } from '@ultraos/ultratest/src/interfaces/plugin';
+import { UltraTest, UltraTestAPI } from '@ultraos/ultratest/src/interfaces/test';
+import { config, keychain } from '@ultraos/ultratest/src/services';
+import { logger } from '@ultraos/ultratest/src/utility';
 
-import { SystemAPI, system } from '../../system';
-import { UltraAPIv2 } from '../../ultraStartup';
-
-// import { HTTP_API } from '@ultraos/ultratest/src/apis/http';
-// import * as api from '@ultraos/ultratest/src/apis/pluginApi';
-// import { Plugin, argsToParams } from '@ultraos/ultratest/src/interfaces/plugin';
-// import { UltraTest, UltraTestAPI } from '@ultraos/ultratest/src/interfaces/test';
-// import { config, keychain } from '@ultraos/ultratest/src/services';
-// import { logger } from '@ultraos/ultratest/src/utility';
-
-// import { SystemAPI, system } from '@ultraos/ultratest/src/plugins/system';
-// import { UltraAPIv2 } from '@ultraos/ultratest/src/plugins/ultraStartup';
+import { SystemAPI, system } from '@ultraos/ultratest/src/plugins/system';
+import { UltraAPIv2 } from '@ultraos/ultratest/src/plugins/ultraStartup';
 
 export class OracleAPI {
     public logger: typeof logger;
