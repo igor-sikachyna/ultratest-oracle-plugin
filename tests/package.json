@@ -12,8 +12,8 @@
         "test": "echo test"
     },
     "dependencies": {
-        "@ultraos/ultratest": "/home/igor/ultra/ultratest2",
-        "ultratest-oracle-plugin": "/home/igor/ultra/ultratest2/src/plugins/custom/ultratest-oracle-plugin",
+        "@ultraos/ultratest": "../../../..",
+        "ultratest-oracle-plugin": "..",
         "typescript": "^5.2.2"
     },
     "ultratestPlugins": {

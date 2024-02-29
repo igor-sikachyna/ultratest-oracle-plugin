@@ -1,12 +1,7 @@
-import * as api from '../../../../apis/testApi';
-import { UltraTest, UltraTestAPI } from '../../../../interfaces/test';
-import * as plugins from '../../../nativePlugins';
-import { oracle } from '../oracle';
-
-// import * as api from '@ultraos/ultratest/src/apis/testApi';
-// import { UltraTest, UltraTestAPI } from '@ultraos/ultratest/src/interfaces/test';
-// import * as plugins from '@ultraos/ultratest/src/plugins/plugins';
-// import { oracle } from 'ultratest-oracle-plugin/oracle';
+import * as api from '@ultraos/ultratest/apis/testApi';
+import { UltraTest, UltraTestAPI } from '@ultraos/ultratest/interfaces/test';
+import * as plugins from '@ultraos/ultratest/plugins/nativePlugins';
+import { oracle } from 'ultratest-oracle-plugin/oracle';
 
 export default class OracleTest extends UltraTest {
     constructor() {
