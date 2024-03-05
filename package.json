@@ -12,6 +12,12 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@ultraos/ultratest": "../../../"
+        "@ultraos/ultratest": "../../..",
+        "ultratest-genesis-plugin": "../../native/genesis",
+        "ultratest-system-plugin": "../../native/system"
+    },
+    "ultratestPlugins": {
+        "ultratest-genesis-plugin": "native",
+        "ultratest-system-plugin": "native"
     }
 }

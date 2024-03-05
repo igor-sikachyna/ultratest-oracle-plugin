@@ -5,7 +5,7 @@ import { UltraTest, UltraTestAPI } from '@ultraos/ultratest/interfaces/test';
 import { config, keychain } from '@ultraos/ultratest/services';
 import { logger } from '@ultraos/ultratest/utility';
 
-import { SystemAPI, system } from '@ultraos/ultratest/plugins/system';
+import { SystemAPI, system } from 'ultratest-system-plugin/system';
 import { UltraAPIv2 } from '@ultraos/ultratest/plugins/ultraStartup';
 
 export class OracleAPI {
